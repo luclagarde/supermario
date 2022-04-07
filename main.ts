@@ -25,8 +25,6 @@ function E () {
     music.rest(music.beat(BeatFraction.Half))
 }
 input.onButtonPressed(Button.A, function () {
-    music.setVolume(255)
-    music.setTempo(135)
     E()
     for (let index = 0; index < 2; index++) {
         music.playTone(262, music.beat(BeatFraction.Half))
@@ -101,3 +99,6 @@ function a () {
     music.playTone(330, music.beat(BeatFraction.Quarter))
     music.rest(music.beat(BeatFraction.Quarter))
 }
+music.setBuiltInSpeakerEnabled(true)
+music.setVolume(255)
+music.setTempo(135)
